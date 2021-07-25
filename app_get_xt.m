@@ -3,9 +3,10 @@ clear;
 syms x;
 
 % TODO: write down the equations
+Max = @(aa,bb) piecewise(aa>bb,aa,bb);
 r1 = sign(x) * abs(x)^(1/3);
 r2 = x^2;
-r3 = 2 * x - 1; % wtf
+r3 = Max(x, 2 * x - 1); % wtf
 
 % Tip: try the easy diffs first
 r = r2; % TODO adjust r here in the exam
